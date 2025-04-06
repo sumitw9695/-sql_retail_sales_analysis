@@ -117,7 +117,7 @@ WHERE
     quantity >= 2
 ```
 
-3. **Write a SQL query to calculate the total sales (total_sale) for each category.**:
+3. **Write a SQL query to calculate the total sales (total_sale) for each category.**
 ```sql
 Select
 	category,
@@ -127,7 +127,7 @@ from retail_sales
 group by 1; 
 ```
 
-4. **Write a SQL query to find the average age of customers who purchased items from the 'Beauty' category.**:
+4. **Write a SQL query to find the average age of customers who purchased items from the 'Beauty' category.**
 ```sql
 SELECT
     ROUND(AVG(age), 2) as avg_age
@@ -135,13 +135,13 @@ FROM retail_sales
 WHERE category = 'Beauty'
 ```
 
-5. ** Write a SQL query to find all transactions where the total_sale is greater than 1500**:
+5. **Write a SQL query to find all transactions where the total_sale is greater than 1500.**
 ```sql
 select *from retail_sales
  where total_sale > 1500;
 ```
 
-6. **Write a SQL query to find the total number of transactions (transaction_id) made by each gender in each category.**:
+6. **Write a SQL query to find the total number of transactions (transaction_id) made by each gender in each category.**
 ```sql
 select
 	category,
@@ -154,7 +154,7 @@ GROUP BY
 ORDER BY 1
 ```
 
-7. **Write a SQL query to calculate the average sale for each month. Find out best selling month in each year**:
+7. **Write a SQL query to calculate the average sale for each month. Find out best selling month in each year.**
 ```sql
 SELECT 
        year,
@@ -173,7 +173,7 @@ GROUP BY 1, 2
 WHERE rank = 1
 ```
 
-8. **Write a SQL query to find the top 10 customers based on the highest total sales  **:
+8. **Write a SQL query to find the top 10 customers based on the highest total sales.**
 ```sql
 SELECT 
     customer_id,
@@ -193,7 +193,7 @@ from retail_sales
 group by category
 ```
 
-10. **Write a SQL query to create each shift and number of orders (Example Morning <12, Afternoon Between 12 & 17, Evening >17)**:
+10. **Write a SQL query to create each shift and number of orders (Example Morning <12, Afternoon Between 12 & 17, Evening >17).**
 ```sql
 WITH hourly_sale
 as
